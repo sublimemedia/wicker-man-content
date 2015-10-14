@@ -1,5 +1,5 @@
 {
-  "name": "@sublumemedia/wicker-man-content",
+  "name": "@sublimemedia/wicker-man-content",
   "version": "0.1.1",
   "description": "Reactive temporary data storage",
   "main": "./dist/WMMContent.js",
