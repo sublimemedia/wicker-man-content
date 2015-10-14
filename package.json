@@ -1,8 +1,8 @@
 {
   "name": "@sublimemedia/wicker-man-content",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reactive temporary data storage",
-  "main": "./dist/WMMContent.js",
+  "main": "./dist/WMContent.js",
   "scripts": {
     "build": "rm -rf ./dist && broccoli build ./dist",
     "test": "./node_modules/.bin/mocha -R spec --recursive",
