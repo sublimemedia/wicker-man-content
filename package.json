@@ -1,6 +1,6 @@
 {
-  "name": "wicker-man-content",
-  "version": "0.1.0",
+  "name": "@sublumemedia/wicker-man-content",
+  "version": "0.1.1",
   "description": "Reactive temporary data storage",
   "main": "./dist/WMMContent.js",
   "scripts": {
@@ -25,10 +25,9 @@
     "istanbul": "^0.3.20",
     "mocha": "^2.3.2"
   },
-  "private": true,
   "dependencies": {
-    "bluebird": "^2.10.0",
-    "wicker-man-bee": "git+ssh://git@github.com/sublimemedia/wicker-man-bee.git",
-    "wicker-man-utilities": "git+ssh://git@github.com/sublimemedia/wicker-man-utilities.git"
+    "@sublimemedia/wicker-man-bee": "^0.1.0",
+    "@sublimemedia/wicker-man-utilities": "^0.1.1",
+    "bluebird": "^2.10.0"
   }
 }

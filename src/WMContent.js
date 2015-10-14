@@ -1,5 +1,5 @@
-import { getFromPath, createPath, extend } from 'wicker-man-utilities';
-import WMBee from 'wicker-man-bee';
+import { getFromPath, createPath, extend } from '@sublimemedia/wicker-man-utilities';
+import WMBee from '@sublimemedia/wicker-man-bee';
 
 
 export default class WMContent {

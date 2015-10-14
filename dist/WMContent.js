@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === 'function' && define.amd) {
-    define(['exports', 'module', 'wicker-man-utilities', 'wicker-man-bee'], factory);
+    define(['exports', 'module', '@sublimemedia/wicker-man-utilities', '@sublimemedia/wicker-man-bee'], factory);
   } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
-    factory(exports, module, require('wicker-man-utilities'), require('wicker-man-bee'));
+    factory(exports, module, require('@sublimemedia/wicker-man-utilities'), require('@sublimemedia/wicker-man-bee'));
   } else {
     var mod = {
       exports: {}
@@ -10,14 +10,14 @@
     factory(mod.exports, mod, global.wickerManUtilities, global.WMBee);
     global.WMContent = mod.exports;
   }
-})(this, function (exports, module, _wickerManUtilities, _wickerManBee) {
+})(this, function (exports, module, _sublimemediaWickerManUtilities, _sublimemediaWickerManBee) {
   'use strict';
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-  var _WMBee = _interopRequireDefault(_wickerManBee);
+  var _WMBee = _interopRequireDefault(_sublimemediaWickerManBee);
 
   var WMContent = (function () {
     function WMContent() {
@@ -30,7 +30,7 @@
     WMContent.prototype.get = function get(prop) {
       if (this.store) {
         if (prop) {
-          return (0, _wickerManUtilities.getFromPath)(prop, (0, _wickerManUtilities.extend)(true, {}, this.store));
+          return (0, _sublimemediaWickerManUtilities.getFromPath)(prop, (0, _sublimemediaWickerManUtilities.extend)(true, {}, this.store));
         } else {
           return this.store;
         }
@@ -41,7 +41,7 @@
       var _this = this;
 
       if (key && typeof key === 'string') {
-        var pathInfo = (0, _wickerManUtilities.createPath)(key, this.store, true);
+        var pathInfo = (0, _sublimemediaWickerManUtilities.createPath)(key, this.store, true);
 
         pathInfo.parent[pathInfo.key] = val;
 
@@ -61,7 +61,7 @@
       var bee = new _WMBee['default']();
 
       if (prop && typeof prop === 'string') {
-        var path = (0, _wickerManUtilities.createPath)(prop, this.observed);
+        var path = (0, _sublimemediaWickerManUtilities.createPath)(prop, this.observed);
 
         path._hooks = path._hooks || [];
         path._hooks.push(bee.set.bind(bee));
@@ -75,8 +75,8 @@
 
       if (keyPath) {
         (function () {
-          var hooks = (0, _wickerManUtilities.getFromPath)(keyPath, _this2.observed),
-              val = (0, _wickerManUtilities.getFromPath)(keyPath, _this2.store);
+          var hooks = (0, _sublimemediaWickerManUtilities.getFromPath)(keyPath, _this2.observed),
+              val = (0, _sublimemediaWickerManUtilities.getFromPath)(keyPath, _this2.store);
 
           if (hooks && hooks._hooks) {
             hooks._hooks.forEach(function (callback) {
@@ -95,7 +95,7 @@
       this.getEndPoints(prop, val).forEach(function (endpoint) {
         var keyPath = '';
 
-        (0, _wickerManUtilities.getFromPath)(endpoint, _this3.observed, false, (function (pathInfo) {
+        (0, _sublimemediaWickerManUtilities.getFromPath)(endpoint, _this3.observed, false, (function (pathInfo) {
           if (pathInfo) {
             keyPath += '.' + pathInfo.key;
 
