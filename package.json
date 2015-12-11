@@ -1,6 +1,6 @@
 {
   "name": "@sublimemedia/wicker-man-content",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Reactive temporary data storage",
   "main": "./dist/WMContent.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/sublimemedia/wicker-man-content.git"
   },
   "author": "Sublime Media",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN license.md",
   "bugs": {
     "url": "https://github.com/sublimemedia/wicker-man-content/issues"
   },
